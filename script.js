@@ -1,4 +1,4 @@
-const wsUri = "wss://echo-ws-service.herokuapp.com";
+const wsUrl = "wss://echo-ws-service.herokuapp.com";
 
 function pageLoaded() {
   const infoOutput = document.querySelector(".info_output");
@@ -7,7 +7,7 @@ function pageLoaded() {
   const sendBtn = document.querySelector(".btn_send");
   const btnGeo = document.querySelector(".btn_geo");
   
-  let socket = new WebSocket(wsUri);
+  let socket = new WebSocket(wsUrl);
   let mapLink;
   
   socket.onopen = () => {
